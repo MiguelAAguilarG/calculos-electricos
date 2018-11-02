@@ -28,27 +28,6 @@ datos(17)=2; %17. Canalizacion: Conduit(1), Charola(2)
 datos(18)=2; %18. Material Canalizacion: Acero(1), PVC(2), Aluminio(3)
 datos(19)=0; %19. Neutro sistema trifasico: SI(1), NO(0)
 
-datos(1)=3; %1. Sistema(1,3)
-datos(2)=460; %2. Voltaje(V)
-datos(3)=sqrt(3)*515*460*.74; %3. Carga(W)
-datos(4)=1.25; %4. Factor de carga
-datos(5)=0.74; %5. factor de potencia (>0-1)
-datos(6)=3; %6. Caída de tensión(%)
-datos(7)=35; %7. Longitud(m)
-datos(8)=0; %8. Conductores activos adicionales en la misma canalización aparte del circuito calculado. El programa no considera los neutros (sistemas trifásicos) y tierras fisicas del circuito calculado.
-datos(9)=40; %9. Temperatura ambiente(°C)
-datos(10)=75; %10. Temperatura del aislante del conductor(°C)
-datos(11)=1; %11. Material del conductor: Cobre(1), Aluminio(2)
-datos(12)=3; %12. Conductores por fase
-datos(13)=0; %13. Total de conductores de fase en la misma canalización?: Si(1) No(0)
-datos(14)=1; %14. Ajuste hacia abajo en caso de no encontrar interruptor cercano con Factor de carga establecido(Factor de carga-Ajuste/100) (%)
-datos(15)=100; %15. Ajuste Irating interruptor (%)
-datos(16)=640; %16. Interruptor forzado (A) NOTA: NO APLICA = 0 
-datos(17)=2; %17. Canalizacion: Conduit(1), Charola(2)
-datos(18)=3; %18. Material Canalizacion: Acero(1), PVC(2), Aluminio(3)
-datos(19)=0; %18. Neutro sistema trifasico: SI(1), NO(0)
-
-
 numero_datos = 19;%Variable de control
 %DATOS DE ENTRADA (Explicación)
 %-------------------------------------------------------------------------------
@@ -559,7 +538,6 @@ end
 for n=1:length(calibre_tabla)
   if cell2mat(tierra) == cell2mat(calibre_tabla(n))
   aux_3 = n;
-  aux_3 = 13;
   
   if canalizacion == 2 && aux_3 <=5
   disp('NOTA. Tierra fisica forzada a calibre 4 por estar en charola');

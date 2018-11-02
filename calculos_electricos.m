@@ -10,7 +10,7 @@ clc;
 
 datos(1)=3; %1. Sistema(1,3)
 datos(2)=460; %2. Voltaje(V)
-datos(3)=515*460*.79; %3. Carga(W)
+datos(3)=sqrt(3)*515*460*.79; %3. Carga(W)
 datos(4)=1.25; %4. Factor de carga
 datos(5)=0.79; %5. factor de potencia (>0-1)
 datos(6)=3; %6. Caída de tensión(%)
